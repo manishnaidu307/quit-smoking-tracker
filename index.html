@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quit Free</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quit Free</title>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <div class="app">
+    <h2>Quit Smoking Tracker 🚭</h2>
+
     <button id="urgeBtn">I have an urge</button>
+
     <p id="message"></p>
     <p id="timer"></p>
 
-    <p>Total urges resisted: <span id="totalCount">0</span></p>
-    <p>Urges today: <span id="todayCount">0</span></p>
-    <p>Streak: <span id="streak">0</span></p>
-    <p>Money saved: ₹<span id="money">0</span></p>
+    <div class="stats">
+      <div class="stat-card">
+        Urges Today
+        <span id="todayCount">0</span>
+      </div>
+
+      <div class="stat-card">
+        Total Urges
+        <span id="totalCount">0</span>
+      </div>
+
+      <div class="stat-card">
+        Streak (days)
+        <span id="streak">0</span>
+      </div>
+
+      <div class="stat-card">
+        ₹ Saved
+        <span id="money">0</span>
+      </div>
+    </div>
+
     <button id="resetStreakBtn">Reset Streak</button>
+  </div>
 
-
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
