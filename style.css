@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  button {
+    background-color: bisque;
+    padding: 15px 30px;
+    font-size: 18px;
+    border : 2px solid black;
+    border-radius: 12px;
+    cursor: pointer;
+
+  }
+
+  button:disabled{
+    opacity : 0.6;
+    cursor : not-allowed;
+  }
+
+  #message{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #444;
+  }
+
+  #timer{
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  #resetStreakBtn{
+    margin-top: 10px;
+    padding : 8px 16px;
+    font-size : 14px;
+    color: #a20c0cd6;
+    background: #eee;
+    border: 1px solid #a48a8a;
+    cursor : pointer;
+  }
