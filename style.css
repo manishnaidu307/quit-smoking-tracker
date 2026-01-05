@@ -132,8 +132,69 @@ body {
 #badges .unlocked {
   opacity: 1;
   background: #dcfce7;
-  border: 1px solid #86efac;
+  border: 1px solid #22c55e;
+  color : #14532d;
 }
+
+/* ---------- THEME TOGGLE ---------- */
+#themeToggle {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 10px;
+  font-size: 14px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ---------- DARK MODE ---------- */
+body.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark .app {
+  background: #020617;
+  box-shadow: none;
+}
+
+body.dark .stat-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+}
+
+body.dark #message {
+  color: #cbd5f5;
+}
+
+body.dark #timer {
+  color: #f8fafc;
+}
+
+body.dark #themeToggle {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+body.dark #resetStreakBtn,
+body.dark #resetBadgesBtn {
+  border-color: #334155;
+  color: #e5e7eb;
+}
+
+body.dark #badges .stat-card{
+  background: #020617;
+  border: 1px solid #1e293b;
+  color: #94a3b8;
+}
+
+body.dark #badges .unlocked{
+  background: #064e3b;
+  border: 1px solid #10b981;
+  color : #ecfdf5;
+}
+
 
 /* -------------RESPONSIVE------------------- */
 @media (max-width: 480px) {

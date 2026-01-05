@@ -15,6 +15,7 @@ const streakBadge = document.getElementById("badge-streak");
 
 const resetBadgesBtn = document.getElementById("resetBadgesBtn");
 
+const themeToggle = document.getElementById("themeToggle");
 
 // ---------- CONSTANTS ----------
 const COST_PER_CIG = 19;
@@ -35,6 +36,7 @@ resetDailyUrges();
 updateUI();
 attachEvents();
 loadBadges();
+loadTheme();
 
 // ---------- FUNCTIONS ----------
 
@@ -66,6 +68,7 @@ function attachEvents() {
   button.addEventListener("click", startUrgeTimer);
   resetBtn.addEventListener("click", resetStreak);
   resetBadgesBtn.addEventListener("click", resetBadges);
+  themeToggle.addEventListener("click", toggleTheme);
 }
 
 function startUrgeTimer() {
@@ -186,4 +189,20 @@ function resetBadges(){
   bronzeBadge.classList.remove("unlocked");
   silverBadge.classList.remove("unlocked");
   streakBadge.classList.remove("unlocked");
+}
+
+function loadTheme(){
+  const theme = localStorage.getItem("theme");
+  if(theme === "dark"){
+    document.body.classList.add("dark");
+    themeToggle.textContent = "☀️ Light Mode";
+  }
+}
+
+function toggleTheme(){
+  document.body.classList.toggle("dark");
+
+  const isDark = document.body.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  themeToggle.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
 }
