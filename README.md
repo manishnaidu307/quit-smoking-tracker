@@ -31,7 +31,7 @@ A responsive habit-tracking web application designed to support smoking cessatio
 1. Clone the repository
    ```bash
    git clone https://github.com/manishnaidu307/quit-smoking-tracker.git
-2. Open index.html in any modern browser
+2. Open `index.html` in any modern browser
 
 ## Future Improvements 
 - Progressive Web App (PWA) support
