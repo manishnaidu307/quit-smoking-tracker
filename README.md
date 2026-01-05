@@ -12,6 +12,18 @@ A responsive habit-tracking web application designed to support smoking cessatio
 - Fully responsive, mobile-first UI
 - Persistent data storage using browser `localStorage`
 
+## 📸 Screenshots
+
+### Main Interface
+![Main Screen](screenshots/mainscreen.png)
+
+### Urge Countdown
+![Timer Running](screenshots/countdown.png)
+
+### Dark Mode & Badges
+![Dark Mode](screenshots/dark-mode.png)
+
+
 ## 🛠 Tech Stack
 - **HTML5** — semantic structure  
 - **CSS3** — responsive layout, dark mode theming  
