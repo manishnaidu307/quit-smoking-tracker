@@ -15,10 +15,9 @@ A simple web application built to help quit smoking by tracking urges, maintaini
 - JavaScript (Vanilla)
 
 ## Why I Built This
-This project was built to solve a real personal problem while learning core web development concepts such as state management, event handling, and data persistence.
+This project was built to solve a real problem while learning core web development concepts such as state management, event handling, and data persistence.
 
-## Future Improvements
-- Reward badges
+## Future Improvements 
 - Progressive Web App (PWA) support
 - Trigger logging and analytics
 - Cloud sync and authentication
