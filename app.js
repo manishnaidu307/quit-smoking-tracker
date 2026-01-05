@@ -9,6 +9,11 @@ const todayCountEl = document.getElementById("todayCount");
 
 const resetBtn = document.getElementById("resetStreakBtn");
 
+const bronzeBadge = document.getElementById("badge-bronze");
+const silverBadge = document.getElementById("badge-silver");
+const streakBadge = document.getElementById("badge-streak");
+
+
 // ---------- CONSTANTS ----------
 const COST_PER_CIG = 19;
 const today = new Date().toDateString();
@@ -27,6 +32,7 @@ let todayUrgeDate = localStorage.getItem("todayUrgeDate");
 resetDailyUrges();
 updateUI();
 attachEvents();
+loadBadges();
 
 // ---------- FUNCTIONS ----------
 
@@ -78,6 +84,7 @@ function startUrgeTimer() {
 
 function onUrgeSuccess() {
   updateCounts();
+  checkRewards();
   updateMoney();
   updateStreak();
 
@@ -133,4 +140,33 @@ function resetStreak() {
   setNumber("streak", streak);
   localStorage.removeItem("lastDate");
   streakEl.textContent = streak;
+}
+
+function unlockBadge(key, element){
+  localStorage.setItem(key, "true");
+  element.classList.add("unlocked");
+}
+
+function loadBadges(){
+  if(localStorage.getItem("bronzeBadge")){
+    bronzeBadge.classList.add("unlocked");
+  }
+  if(localStorage.getItem("silverBadge")){
+    silverBadge.classList.add("unlocked");
+  }
+  if(localStorage.getItem("streakBadge")){
+    streakBadge.classList.add("unlocked");
+  }
+}
+
+function checkRewards(){
+  if(totalCount >= 5 && !localStorage.getItem("bronzeBadge")){
+    unlockBadge("bronzeBadge", bronzeBadge);
+  }
+  if(totalCount >= 10 && !localStorage.getItem("silverBadge")){
+    unlockBadge("silverBadge", silverBadge);
+  }
+  if(streak >= 7 && !localStorage.getItem("streakBadge")){
+    unlockBadge("streakBadge", streakBadge);
+  }
 }

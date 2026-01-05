@@ -108,7 +108,18 @@ body {
   background: #f1f5f9;
 }
 
-/* ---------- RESPONSIVE ---------- */
+#badges .stat-card {
+  opacity: 0.3;
+  font-size: 16px;
+}
+
+#badges .unlocked {
+  opacity: 1;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+}
+
+
 @media (max-width: 480px) {
   .app {
     border-radius: 0;
