@@ -13,6 +13,8 @@ const bronzeBadge = document.getElementById("badge-bronze");
 const silverBadge = document.getElementById("badge-silver");
 const streakBadge = document.getElementById("badge-streak");
 
+const resetBadgesBtn = document.getElementById("resetBadgesBtn");
+
 
 // ---------- CONSTANTS ----------
 const COST_PER_CIG = 19;
@@ -63,6 +65,7 @@ function updateUI() {
 function attachEvents() {
   button.addEventListener("click", startUrgeTimer);
   resetBtn.addEventListener("click", resetStreak);
+  resetBadgesBtn.addEventListener("click", resetBadges);
 }
 
 function startUrgeTimer() {
@@ -169,4 +172,18 @@ function checkRewards(){
   if(streak >= 7 && !localStorage.getItem("streakBadge")){
     unlockBadge("streakBadge", streakBadge);
   }
+}
+
+function resetBadges(){
+  const confirmReset = confirm("Reset all badges? This cannot be undone.");
+
+  if(!confirmReset) return;
+
+  localStorage.removeItem("bronzeBadge");
+  localStorage.removeItem("silverBadge");
+  localStorage.removeItem("streakBadge");
+
+  bronzeBadge.classList.remove("unlocked");
+  silverBadge.classList.remove("unlocked");
+  streakBadge.classList.remove("unlocked");
 }
